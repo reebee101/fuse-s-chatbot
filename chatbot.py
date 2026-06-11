@@ -485,12 +485,9 @@ def get_relevant_context(query, n_results=25):
     return f"[Yearly Anchors]\n{yearly_anchor}\n\n[Retrieved Context]\n{retrieved}"
 
 # ── 9. GROQ CLIENT ───────────────────────────────────────────
-# ⚠️  Move your API key to an environment variable:
-#     set GROQ_API_KEY=your_key_here  (Windows)
-#     export GROQ_API_KEY=your_key_here  (Mac/Linux)
 client = OpenAI(
     base_url="https://api.groq.com/openai/v1",
-    api_key= os.environ.get("GROQ_API_KEY", "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")
+    api_key= os.environ.get("GROQ_API_KEY", "")
 )
 
 # ── 10. CHAT ─────────────────────────────────────────────────
